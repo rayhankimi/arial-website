@@ -1,10 +1,14 @@
 <script setup lang="ts">
 import Card from "~/components/Card.vue";
+import { ref } from "vue";
+
+const showRightSection = ref(false);
 </script>
 
 <template>
   <div class="container">
     <div class="flex flex-col-reverse md:flex-row">
+
       <!-- LeftSection -->
       <div class="left-section w-full md:w-3/5 px-5 py-8 md:px-8">
         <h1 class="text-5xl funnel-display-bold text-right px-8 py-4"> Arial,</h1>
@@ -56,14 +60,55 @@ Etiam rhoncus, urna et posuere viverra, purus mauris bibendum erat, id suscipit 
         </div>
       </div>
 
+
       <!-- RightSection -->
-      <div class="right-section w-full md:w-2/5 p-8 md:px-8">
-        <Monitor
-            image="/gwk.jpg"
-            title="Hello World"
-            description="This is monitor component"
-        />
+      <div
+          class="right-section hidden md:block w-full md:w-2/5 px-8 py-8 sticky top-16"
+      >
+        <div class="flex flex-col items-center">
+          <h1 class="funnel-display-bold text-5xl text-right">
+            Status monitor kemacetan
+          </h1>
+          <Monitor
+              image="/gwk.jpg"
+              title="Hello World"
+              description="This is monitor component"
+          />
+        </div>
       </div>
+
+      <!-- Button for Mobile -->
+      <button
+          class="fixed bottom-4 right-4 z-50 p-4 bg-yellow-500 text-black rounded-full shadow-md hover:bg-yellow-600 focus:outline-none focus:ring-2 focus:ring-yellow-300 block md:hidden"
+          @click="showRightSection = true"
+      >
+        Monitor Kemacetan
+      </button>
+
+      <transition name="fade">
+        <!-- Modal for mobile -->
+        <div
+            v-if="showRightSection"
+            class="modal fixed inset-0 z-50  p-4 flex flex-col overflow-auto"
+        >
+          <button
+              class="self-end mb-4 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+              @click="showRightSection = false"
+          >
+            Tutup
+          </button>
+          <div class="flex flex-col items-center">
+            <h1 class="funnel-display-bold text-3xl text-center mb-4">
+              Status monitor kemacetan
+            </h1>
+            <Monitor
+                image="/gwk.jpg"
+                title="Hello World"
+                description="This is monitor component"
+            />
+          </div>
+        </div>
+      </transition>
     </div>
   </div>
 </template>
@@ -72,6 +117,18 @@ Etiam rhoncus, urna et posuere viverra, purus mauris bibendum erat, id suscipit 
 .container {
   margin: 0 auto;
   min-height: calc(100vh - 64px);
+}
+
+.left-section {
+  border-right: 1px solid black;
+}
+
+.right-section{
+  height: fit-content;
+}
+
+.modal {
+  background-color: #49CAAE;
 }
 
 .funnel-display-bold {
@@ -159,5 +216,23 @@ Etiam rhoncus, urna et posuere viverra, purus mauris bibendum erat, id suscipit 
   content: "kemacetan"; /* Teks default */
   display: inline-block;
   animation: textChange3 12s infinite steps(1, end), /* Pergantian teks */ colorFade 3s infinite ease-in-out; /* Animasi gradasi warna */
+}
+
+/* Transisi untuk modal */
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease, transform 0.5s ease;
+}
+
+.fade-enter-from,
+.fade-leave-to {
+  opacity: 0;
+  transform: translateY(20px); /* Modal muncul dari bawah */
+}
+
+.fade-enter-to,
+.fade-leave-from {
+  opacity: 1;
+  transform: translateY(0); /* Modal kembali ke posisi normal */
 }
 </style>
