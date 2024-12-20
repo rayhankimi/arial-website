@@ -12,9 +12,9 @@ const showRightSection = ref(false);
       <!-- LeftSection -->
       <div class="left-section w-full md:w-3/5 px-5 py-8 md:px-8">
         <h1 class="text-5xl funnel-display-bold text-right px-8 py-4"> Arial,</h1>
-        <div class="flex flex-row flex-wrap items-center px-4 md:px-8">
+        <div class="message flex flex-row flex-wrap items-center px-4 md:px-8">
           <h1 class="text-lg sm:text-3xl md:text-2xl lg:text-3xl funnel-display-bold px-0.5">
-            Merupakan solusi teknis
+            Kami coba mencari solusi
           </h1>
           <h1 class="text-lg sm:text-3xl md:text-2xl lg:text-3xl funnel-display-bold px-0.5">
             untuk
