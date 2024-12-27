@@ -1,8 +1,26 @@
 <script setup lang="ts">
 import Card from "~/components/Card.vue";
-import { ref } from "vue";
+import Monitor from "~/components/Monitor.vue";
+import {onMounted, ref} from "vue";
 
 const showRightSection = ref(false);
+
+// Fetch data di komponen induk
+const monitorData = ref(null);
+const monitorError = ref(null);
+
+onMounted(async () => {
+  try {
+    monitorData.value = await $fetch('/api/user/device/1/latest-value', {
+      baseURL: useRuntimeConfig().public.baseURL,
+      headers: {
+        Authorization: `Token ${useRuntimeConfig().public.apiSecret}`,
+      },
+    });
+  } catch (err) {
+    monitorError.value = err;
+  }
+});
 </script>
 
 <template>
@@ -70,9 +88,13 @@ Etiam rhoncus, urna et posuere viverra, purus mauris bibendum erat, id suscipit 
             Status monitor kemacetan
           </h1>
           <Monitor
-              image="/gwk.jpg"
-              title="Hello World"
-              description="This is monitor component"
+              :image="monitorData?.image || '/gwk.jpg'"
+              :trafficValue="monitorData?.value || 0"
+              :trafficDate="monitorData?.taken_at || 'Loading...'"
+              :motor="monitorData?.motorcycle_count || 0"
+              :mobil="monitorData?.car_count || 0"
+              :truck-kecil="monitorData?.smalltruck_count || 0"
+              :kendaraan-besar="monitorData?.bigvehicle_count || 0"
           />
         </div>
       </div>
@@ -102,9 +124,13 @@ Etiam rhoncus, urna et posuere viverra, purus mauris bibendum erat, id suscipit 
               Status monitor kemacetan
             </h1>
             <Monitor
-                image="/gwk.jpg"
-                title="Hello World"
-                description="This is monitor component"
+                :image="monitorData?.image || '/gwk.jpg'"
+                :trafficValue="monitorData?.value || 0"
+                :trafficDate="monitorData?.taken_at || 'Loading...'"
+                :motor="monitorData?.motorcycle_count || 0"
+                :mobil="monitorData?.car_count || 0"
+                :truck-kecil="monitorData?.smalltruck_count || 0"
+                :kendaraan-besar="monitorData?.bigvehicle_count || 0"
             />
           </div>
         </div>

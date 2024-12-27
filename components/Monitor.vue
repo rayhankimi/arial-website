@@ -1,9 +1,18 @@
-<script setup >
+<script setup>
+import {useAsyncData} from "#app";
+
+// Define props untuk menerima data dari parent
 defineProps({
-  title: String,
-  description: String,
+  trafficValue: Number,
+  trafficDate: String,
+  motor: Number,
+  mobil: Number,
+  truckKecil: Number,
+  kendaraanBesar: Number,
   image: String,
-})
+});
+
+
 </script>
 
 <template>
@@ -18,9 +27,14 @@ defineProps({
           />
         </figure>
         <div class="px-6 py-5 text-left h-full">
-          <h1 class="text-[32px] mb-4 text-center text-semibold">{{ title }}</h1>
-          <p class="text-sm mb-4"> {{ description}} </p>
-          <strong>Read More</strong>
+          <h1 class="text-[32px] mb-4 text-center text-semibold"> Tingkat Kemacetan : {{ trafficValue }}</h1>
+          <h1 class="text-md mb-4"> Pada : {{ trafficDate }} </h1>
+          <ul>
+            <li> Motor : {{ motor }} </li>
+            <li> Mobil : {{ mobil }}</li>
+            <li> Truck Kecil : {{ truckKecil }}</li>
+            <li> Kendaraan Besar {{ kendaraanBesar }}</li>
+          </ul>
         </div>
       </div>
     </div>
