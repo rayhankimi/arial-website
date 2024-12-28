@@ -2,25 +2,19 @@
 import Card from "~/components/Card.vue";
 import Monitor from "~/components/Monitor.vue";
 import {onMounted, ref} from "vue";
-
 const showRightSection = ref(false);
-
-// Fetch data di komponen induk
 const monitorData = ref(null);
 const monitorError = ref(null);
 
 onMounted(async () => {
   try {
-    monitorData.value = await $fetch('/api/user/device/1/latest-value', {
-      baseURL: useRuntimeConfig().public.baseURL,
-      headers: {
-        Authorization: `Token ${useRuntimeConfig().public.apiSecret}`,
-      },
-    });
+    monitorData.value = await $fetch('/api/latest-value');
   } catch (err) {
     monitorError.value = err;
+    console.error('Error fetching monitor data:', err);
   }
 });
+
 </script>
 
 <template>

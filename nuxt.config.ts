@@ -10,10 +10,9 @@ export default defineNuxtConfig({
     },
   },
   runtimeConfig: {
-    apiKey: process.env.API_KEY,
     public: {
       baseURL: process.env.BASE_URL || 'http://localhost:3000',
-      apiSecret: process.env.API_SECRET,
-    }
+    },
+    apiSecret: process.env.API_SECRET,
   }
 })
