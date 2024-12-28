@@ -13,6 +13,6 @@ export default defineNuxtConfig({
     public: {
       baseURL: process.env.BASE_URL || 'http://localhost:3000',
     },
-    apiSecret: process.env.API_SECRET,
+    apiSecret: process.env.NUXT_API_SECRET,
   }
 })
