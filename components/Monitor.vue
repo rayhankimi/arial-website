@@ -16,7 +16,7 @@ defineProps({
 </script>
 
 <template>
-  <div class="w-full border-2 border-black rounded-md shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-yellow-200 mx-auto my-4">
+  <div class="w-full border-2 border-black rounded-md shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-teal-200 mx-auto my-4">
     <div class="block">
       <div class="w-full h-full">
         <figure class="w-full h-64 border-black border-b-2">

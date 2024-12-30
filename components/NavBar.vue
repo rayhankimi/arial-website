@@ -3,9 +3,9 @@
     <div class="flex items-center justify-between">
 
       <!-- Header logo -->
-     <p class="text-lg">
-       Arial Project
-     </p>
+      <p class="text-lg">
+        Arial Project
+      </p>
 
       <!-- Mobile toggle -->
       <div class="md:hidden">
@@ -23,10 +23,10 @@
       <!-- Navbar -->
       <div class="hidden md:block">
         <ul class="flex space-x-8 text-sm font-sans">
-          <li><a href="#" class="">Home</a></li>
-          <li><a href="#" class="">About Us</a></li>
-          <li><a href="#" class="">Info</a></li>
-          <li><a href="#" class="">Contact</a></li>
+          <li><a href="/" class="">Home</a></li>
+          <li><a href="/about-us" class="">About Us</a></li>
+          <li><a href="/info" class="">Info</a></li>
+          <li><a href="/contact" class="">Contact</a></li>
         </ul>
       </div>
 
@@ -66,10 +66,10 @@
         </span>
 
         <ul class="divide-y font-sans">
-          <li><a href="#" @click="isOpen = false" class="my-4 inline-block">Home</a></li>
-          <li><a href="#" @click="isOpen = false" class="my-4 inline-block">About Us</a></li>
-          <li><a href="#" @click="isOpen = false" class="my-4 inline-block">Info</a></li>
-          <li><a href="#" @click="isOpen = false" class="my-4 inline-block">Contact</a></li>
+          <li><a href="/" @click="isOpen = false" class="my-4 inline-block">Home</a></li>
+          <li><a href="/about-us" @click="isOpen = false" class="my-4 inline-block">About Us</a></li>
+          <li><a href="/info" @click="isOpen = false" class="my-4 inline-block">Info</a></li>
+          <li><a href="/contact" @click="isOpen = false" class="my-4 inline-block">Contact</a></li>
         </ul>
 
 
