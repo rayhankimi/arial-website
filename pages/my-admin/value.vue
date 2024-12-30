@@ -1,7 +1,7 @@
 <template>
-  <div class="admin-container">
-    <h1>Welcome to Value Page</h1>
-    <button @click="logout">Logout</button>
+  <div class="w-full border-2 border-black rounded-md shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-white mx-auto p-2 my-4">
+    <h1 class="text-3xl font-heading">Device Value Management</h1>
+    <p class="text-xl font-heading">Akan digunakan untuk lihat, ubah, dan hapus nilai pada device</p>
   </div>
 </template>
 

@@ -1,7 +1,7 @@
 <template>
-  <div class="admin-container">
-    <h1>Welcome to Device Page</h1>
-    <button @click="logout">Logout</button>
+  <div class="w-full border-2 border-black rounded-md shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-white mx-auto p-2 my-4">
+    <h1 class="text-3xl font-heading">Device Management</h1>
+    <p class="text-xl font-heading">Akan berisi management device (buat, lihat, hapus, dan update)</p>
   </div>
 </template>
 
