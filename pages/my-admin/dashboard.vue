@@ -8,13 +8,15 @@
 <script setup>
 import { useRouter } from 'vue-router';
 import {definePageMeta} from "#imports";
+import auth from "~/middleware/auth.ts"
 
-const router = useRouter();
 
 definePageMeta({
-  layout: 'admin'
+  layout: 'admin',
+  middleware: 'auth'
 });
 
+const router = useRouter();
 const logout = () => {
   localStorage.removeItem('authToken'); // Hapus token dari localStorage
   router.push('/login'); // Redirect ke halaman login
