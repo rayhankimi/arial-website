@@ -64,7 +64,7 @@ const trafficDateReadable = computed(() => {
     <transition name="fade">
       <div
           v-if="showRightSection"
-          class="modal fixed inset-0 z-50 p-4 flex flex-col overflow-auto bg-[#87CEEB]"
+          class="modal fixed inset-0 z-50 p-4 flex flex-col overflow-auto bg-[#eafcf5]"
       >
         <button
             class="self-end mb-4 bg-red-500 text-white px-4 py-2 rounded shadow-[2px_4px_0px_rgba(0,0,0,1)] hover:bg-red-600"

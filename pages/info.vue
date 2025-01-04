@@ -3,11 +3,12 @@
 
 <template>
   <div class="container">
-    <h1> Info </h1>
-    <p>
-      Halaman ini memuat informasi alat dan sumberdaya.
-    </p>
-    <h1 v-for="i in 20"> Ini Info Page {{ i }}</h1>
+    <h1 class="text-5xl funnel-display-bold text-right py-4">
+      Under Construction
+    </h1>
+    <h1 class="text-xl sm:text-3xl md:text-2xl lg:text-3xl funnel-display-bold px-0.5">
+      (Info Page)
+    </h1>
   </div>
 </template>
 
@@ -20,12 +21,11 @@
   color: #000;
 }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
-}
-p {
-  line-height: 1.5;
+.funnel-display-bold {
+  font-family: "Funnel Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 </style>
 

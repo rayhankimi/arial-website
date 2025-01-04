@@ -11,25 +11,25 @@ import Card from "~/components/Card.vue";
 
     <!-- Teks animasi -->
     <div class="flex flex-row flex-wrap items-center">
-      <h1 class="text-lg sm:text-3xl md:text-2xl lg:text-3xl funnel-display-bold px-0.5">
+      <h1 class="text-xl sm:text-3xl md:text-2xl lg:text-3xl funnel-display-bold px-0.5">
         Kami coba mencari solusi
       </h1>
-      <h1 class="text-lg sm:text-3xl md:text-2xl lg:text-3xl funnel-display-bold px-0.5">
+      <h1 class="text-xl sm:text-3xl md:text-2xl lg:text-3xl funnel-display-bold px-0.5">
         untuk
       </h1>
-      <h1 class="text-lg sm:text-3xl md:text-2xl lg:text-3xl funnel-display-bold px-0.5 changing-text">
+      <h1 class="text-xl sm:text-3xl md:text-2xl lg:text-3xl funnel-display-bold px-0.5 changing-text">
       </h1>
-      <h1 class="text-lg sm:text-3xl md:text-2xl lg:text-3xl funnel-display-bold px-0.5">
+      <h1 class="text-xl sm:text-3xl md:text-2xl lg:text-3xl funnel-display-bold px-0.5">
         yang sedang
       </h1>
-      <h1 class="text-lg sm:text-3xl md:text-2xl lg:text-3xl funnel-display-bold px-0.5 changing-text2">
+      <h1 class="text-xl sm:text-3xl md:text-2xl lg:text-3xl funnel-display-bold px-0.5 changing-text2">
       </h1>
-      <h1 class="text-lg sm:text-3xl md:text-2xl lg:text-3xl funnel-display-bold px-0.5">
+      <h1 class="text-xl sm:text-3xl md:text-2xl lg:text-3xl funnel-display-bold px-0.5">
         agar tidak
       </h1>
-      <h1 class="text-lg sm:text-3xl md:text-2xl lg:text-3xl funnel-display-bold px-0.5 changing-text3">
+      <h1 class="text-xl sm:text-3xl md:text-2xl lg:text-3xl funnel-display-bold px-0.5 changing-text3">
       </h1>
-      <h1 class="text-lg sm:text-3xl md:text-2xl lg:text-3xl funnel-display-bold px-0.5">
+      <h1 class="text-xl sm:text-3xl md:text-2xl lg:text-3xl funnel-display-bold px-0.5">
         karena macet.
       </h1>
     </div>

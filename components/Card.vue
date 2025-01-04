@@ -8,14 +8,15 @@
 
   const cardSize = computed(() => {
     return props.indexPage
-        ? `w-full border-2 border-black rounded-md shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-[#DAF5F0] mx-auto my-4`
-        : `w-3/5 border-2 border-black rounded-md shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-[#DAF5F0] my-4`;
+        ? `w-full mx-auto `
+        : `defaultSize`;
   });
 </script>
 
 <template>
   <div
-      :class="cardSize">
+      :class="cardSize"
+      class="border-2 border-black rounded-md shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-[#DAF5F0] my-4">
     <div class="block">
       <div >
         <figure
@@ -37,4 +38,19 @@
 
 
 <style scoped>
+.defaultSize {
+  width: 30%; /* Default width */
+}
+
+@media (min-width: 768px) {
+  .defaultSize {
+    width: 50%; /* Medium devices: width 80% */
+  }
+}
+
+@media (max-width: 640px) {
+  .defaultSize {
+    width: 90%; /* Small devices: width 100% */
+  }
+}
 </style>

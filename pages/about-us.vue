@@ -3,7 +3,14 @@
 
 <template>
   <div class="container ">
-    <h1>About Us</h1>
+    <h1 class="text-5xl funnel-display-bold text-left py-4">
+      Tentang Kami
+    </h1>
+    <div class="flex flex-row flex-wrap items-center">
+      <h1 class="text-2xl sm:text-3xl md:text-2xl lg:text-3xl funnel-display-bold px-0.5">
+        Kami merupakan kelompok Capstone Project yang terdiri dari 3 mahasiswa
+      </h1>
+    </div>
     <Card
         image="/men.jpg"
         title="I Putu Gede Pringga Aditya Pratama"
@@ -36,13 +43,13 @@ Merupakan mahasiswa Teknik Elektro di Universitas Udayana dengan jurusan Elektro
   min-height: calc(100vh - 64px);
 }
 
-h1 {
-  font-size: 2rem;
-  margin-bottom: 1rem;
+.funnel-display-bold {
+  font-family: "Funnel Display", serif;
+  font-optical-sizing: auto;
+  font-weight: 700;
+  font-style: normal;
 }
 
-p {
-  line-height: 1.5;
-}
+
 </style>
 
