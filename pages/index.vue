@@ -10,7 +10,7 @@ import Card from "~/components/Card.vue";
     </h1>
 
     <!-- Teks animasi -->
-    <div class="message flex flex-row flex-wrap items-center">
+    <div class="flex flex-row flex-wrap items-center">
       <h1 class="text-lg sm:text-3xl md:text-2xl lg:text-3xl funnel-display-bold px-0.5">
         Kami coba mencari solusi
       </h1>
@@ -39,15 +39,15 @@ import Card from "~/components/Card.vue";
       <Card
           image="/traffic.jpg"
           title="Terjebak macet karena lampu tak kunjung hijau?"
-          description="Apakah anda pernah terjebak macet namun lampu lalu lintas tidak kunjung berubah?
-
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu lacus non nibh accumsan cursus. ..."
+          description="Di pulau Bali selain peningkatan volume kendaraan yang semakin meningkat, traffic light juga menjadi salah satu faktor sumber kemacetan karena kurangnya pengembangan sistem yang mampu menyesuaikan durasi perubahan warna lampu dengan fluktuasi volume kendaraan yang tidak menentu, sehingga menyebabkan kendaraan menumpuk perlahan dan berubah menjadi kemacetan karena kurangnya waktu untuk melintas saat lampu berwarna hijau."
+          indexPage
       />
 
       <Card
-          image="/img.png"
-          title="Dilengkapi dengan model Computer Vision"
-          description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed eu lacus non nibh accumsan cursus. ..."
+          image="/cv.png"
+          title="Solusi dari kami"
+          description="Berdasarkan permasalahan ini pengembangan sistem penjadwalan phase traffic light otomatis yang dapat menyesuaikan dengan jumlah kepadatan kendaraan yang terjadi ini dapat menjadi solusi untuk mengatasi kemacetan yang terjadi pada traffic light di pulau Bali. Purwarupa alat akan dirancang dengan menggunakan program computer vision yakni salah satu cabang dari kecerdasan buatan atau artificial intelligence (AI) yang berfokus menganalisis gambar atau video oleh komputer.  Dengan program ini proses observasi dapat dilakukan secara otomatis dan langsung dalam mendeteksi, menghitung, dan membedakan jenis dari kendaraan yang terdeteksi."
+          indexPage
       />
     </div>
   </div>

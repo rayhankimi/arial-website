@@ -1,8 +1,8 @@
 <template>
-  <div class="flex items-center justify-center min-h-screen bg-green-200">
+  <div class="flex items-center justify-center min-h-screen ">
     <!-- Card -->
     <div
-        class="bg-amber-200 w-full max-w-sm p-6 rounded-md shadow-[8px_8px_0px_rgba(0,0,0,1)] text-black"
+        class="bg-[#87CEEB] w-full max-w-sm p-6 rounded-md shadow-[8px_8px_0px_rgba(0,0,0,1)] text-black"
     >
       <!-- Judul & Subjudul -->
       <h2 class="text-2xl font-bold mb-1">Login</h2>

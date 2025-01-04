@@ -18,24 +18,27 @@ const trafficDateReadable = computed(() => {
 </script>
 
 <template>
-  <!-- NavBar dengan teks hitam -->
-  <NavBar class="fixed top-0 left-0 w-full h-16 z-50 bg-teal-600 text-black" />
+  <NavBar class="fixed top-0 left-0 w-full h-20 z-50 bg-teal-600 text-black" />
 
-  <!-- Wrapper konten, offset 4rem (h-16) dari atas -->
   <div class="pt-16 flex flex-col md:flex-row">
-    <!-- Left (slot) -->
-    <div class="w-full md:w-3/5 border-r border-black">
+    <div class="w-auto md:w-7/12">
       <slot />
     </div>
 
-    <!-- Right section sticky -->
-    <!-- top-16 agar menempel di bawah navbar saat di-scroll -->
-    <div class="hidden md:block w-full md:w-2/5 px-8 py-8 fixed right-0 top-16">
-      <h1 class="text-3xl font-bold mb-4 text-right">
-        Status monitor kemacetan
-      </h1>
+    <div
+        class="hidden md:block
+         fixed
+         right-0
+         top-16
+         w-full md:w-5/12
+         px-4 py-4
+         h-[calc(100vh-4rem)]
+         overflow-auto
+         shadow-[8px_8px_0px_rgba(0,0,0,1)]
+         "
+    >
       <Monitor
-          :image="monitorData?.image || '/gwk.jpg'"
+          :image="monitorData?.image || '/placeholder.webp'"
           :trafficValue="monitorData?.value || 0"
           :trafficDate="trafficDateReadable"
           :motor="monitorData?.motorcycle_count || 0"
@@ -45,11 +48,13 @@ const trafficDateReadable = computed(() => {
       />
     </div>
 
+
     <!-- Tombol Mobile -->
     <button
         class="fixed bottom-4 right-4 z-50 p-4 bg-yellow-500 text-black rounded-full
-             shadow-md hover:bg-yellow-600 focus:outline-none focus:ring-2
-             focus:ring-yellow-300 block md:hidden"
+             shadow-md shadow-[2px_4px_0px_rgba(0,0,0,1)] bg-[#69D2E7] hover:bg-[#69D2E7]
+             shadow-[2px_4px_0px_rgba(0,0,0,1)] focus:outline-none focus:ring-2
+             focus:ring-blue-300 block md:hidden"
         @click="showRightSection = true"
     >
       Monitor Kemacetan
@@ -59,20 +64,17 @@ const trafficDateReadable = computed(() => {
     <transition name="fade">
       <div
           v-if="showRightSection"
-          class="modal fixed inset-0 z-50 p-4 flex flex-col overflow-auto bg-[#49CAAE]"
+          class="modal fixed inset-0 z-50 p-4 flex flex-col overflow-auto bg-[#87CEEB]"
       >
         <button
-            class="self-end mb-4 bg-red-500 text-white px-4 py-2 rounded hover:bg-red-600"
+            class="self-end mb-4 bg-red-500 text-white px-4 py-2 rounded shadow-[2px_4px_0px_rgba(0,0,0,1)] hover:bg-red-600"
             @click="showRightSection = false"
         >
           Tutup
         </button>
         <div class="flex flex-col items-center">
-          <h1 class="text-3xl font-bold text-center mb-4">
-            Status monitor kemacetan
-          </h1>
           <Monitor
-              :image="monitorData?.image || '/gwk.jpg'"
+              :image="monitorData?.image || '/placeholder.webp'"
               :trafficValue="monitorData?.value || 0"
               :trafficDate="trafficDateReadable"
               :motor="monitorData?.motorcycle_count || 0"

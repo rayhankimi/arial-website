@@ -1,9 +1,9 @@
 <template>
-  <nav class="fixed w-full p-6 bg-teal-700 shadow-[2px_4px_0px_rgba(0,0,0,1)]">
+  <nav class="fixed w-full p-6 bg-[#87CEEB] shadow-[2px_4px_0px_rgba(0,0,0,1)]">
     <div class="flex items-center justify-between">
 
       <!-- Header logo -->
-      <p class="text-lg">
+      <p class="text-2xl text-italic">
         Arial Project
       </p>
 

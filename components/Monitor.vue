@@ -1,6 +1,4 @@
 <script setup>
-import {useAsyncData} from "#app";
-
 // Define props untuk menerima data dari parent
 defineProps({
   trafficValue: Number,
@@ -16,30 +14,40 @@ defineProps({
 </script>
 
 <template>
-  <div class="w-full border-2 border-black rounded-md shadow-[8px_8px_0px_rgba(0,0,0,1)] bg-teal-200 mx-auto my-4">
-    <div class="block">
-      <div class="w-full h-full">
-        <figure class="w-full h-64 border-black border-b-2">
-          <img
-              :src="image"
-              alt="thumbnail"
-              class="w-full h-full object-cover"
-          />
-        </figure>
-        <div class="px-6 py-5 text-left h-full">
-          <h1 class="text-[32px] mb-4 text-center text-semibold"> Tingkat Kemacetan : {{ trafficValue }}</h1>
-          <h1 class="text-md mb-4"> Pada : {{ trafficDate }} </h1>
-          <ul>
-            <li> Motor : {{ motor }} </li>
-            <li> Mobil : {{ mobil }}</li>
-            <li> Truck Kecil : {{ truckKecil }}</li>
-            <li> Kendaraan Besar {{ kendaraanBesar }}</li>
-          </ul>
-        </div>
-      </div>
+  <div
+      class="w-4/5
+           md:max-w-full
+           h-auto
+           rounded-md
+           mx-auto my-auto
+           px-4 py-5"
+  >
+    <h1 class="text-center sm:text-lg md:text-2l lg:text-3xl mb-3 font-semibold"> Status Monitor Kemacetan</h1>
+    <figure class="w-[calc(80%+3rem)] h-[calc(50%+3rem) border-black mx-auto shadow-[8px_8px_0px_rgba(0,0,0,1)] ">
+      <img
+          :src="image"
+          alt="thumbnail"
+          class="w-full h-full object-cover"
+      />
+    </figure>
+    <div class="mt-4 text-left">
+      <!-- Contoh pakai clamp agar teksnya ikut “menyusut” di layar sempit -->
+      <h1 class="[font-size:clamp(1.25rem,3vw,2rem)] mb-2 text-center font-semibold">
+        Tingkat Kemacetan : {{ trafficValue }}
+      </h1>
+      <h1 class="text-sm md:text-base mb-2">
+        Pada : {{ trafficDate }}
+      </h1>
+      <ul class="text-sm md:text-base leading-tight">
+        <li> Motor : {{ motor }} </li>
+        <li> Mobil : {{ mobil }}</li>
+        <li> Truck Kecil : {{ truckKecil }}</li>
+        <li> Kendaraan Besar : {{ kendaraanBesar }}</li>
+      </ul>
     </div>
   </div>
 </template>
+
 
 
 <style scoped>
