@@ -1,5 +1,5 @@
 <template>
-  <nav class="fixed w-full p-6 bg-[#87CEEB] shadow-[2px_4px_0px_rgba(0,0,0,1)]">
+  <nav class="fixed w-full p-6 bg-[#27445D] text-white shadow-[2px_4px_0px_rgba(0,0,0,1)]">
     <div class="flex items-center justify-between">
 
       <!-- Header logo -->
