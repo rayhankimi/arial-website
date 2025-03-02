@@ -1,5 +1,4 @@
 <script setup lang="ts">
-import Monitor from "~/components/Monitor.vue";
 </script>
 
 <template>
